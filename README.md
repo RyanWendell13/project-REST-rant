@@ -21,4 +21,4 @@ places
  - city (string)
  - state (string)
  - cuisines (string)
- -  pic (string)
+ - pic (string)
