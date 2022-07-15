@@ -2,7 +2,9 @@ h1{
     text-align: center;
     color: cornflowerblue;
 }
-
+h2{
+    color: lightblue;
+}
 nav{
     background-color: cornflowerblue;
     padding: 10px;
@@ -33,5 +35,37 @@ body {
     margin-right: 20px;
     margin-left: 20px;
     background-color: white;
+
   }
+
+  .flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .comments{
+    margin-top: 20px;
+    width: 100%;
+    border-top: solid 1px;
+    border-color: lightgray;
+  }
+  
+  .image img{
+    margin-top: 20px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .buttons{
+    margin-top: 7px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .buttons *{
+    margin-left: 5px;
+    display: inline-block;
+  }
+
   
