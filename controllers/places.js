@@ -15,19 +15,24 @@ router.get('/new', (req,res) => {
 })
 
 router.get('/:id', (req, res) => {
-    res.send('place hodl4')
+  db.Place.findById(req.params.id).then(place => {
+    res.render('places/show', {place})
+  }).catch(err =>{
+    console.log('err', err)
+    res.render('error404')
+  })
 })
 
 router.delete('/:id', (req, res) => {
-  res.send('place hodl3')
+  res.send('place holder4')
 })
 
 router.get('/:id/edit', (req, res) => {
-  res.send('place hodl2')
+  res.send('place holder2')
 })
 
 router.put('/:id', (req, res) => {
-  res.send('place hodl1')
+  res.send('place holder1')
 })
 
 
