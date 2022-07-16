@@ -9,7 +9,6 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 
-
 app.use('/places', require('./controllers/places'))
 
 app.get('/', (req, res) =>{
