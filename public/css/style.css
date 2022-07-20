@@ -60,12 +60,16 @@ body {
   .buttons{
     margin-top: 7px;
     width: 100%;
-    text-align: left;
+    text-align: center;
   }
 
   .buttons *{
     margin-left: 5px;
     display: inline-block;
+  }
+
+  img{
+    width: 400px;
   }
 
   
