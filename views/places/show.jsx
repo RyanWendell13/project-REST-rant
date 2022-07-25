@@ -21,6 +21,8 @@ function show (data) {
         </div>
       )
     })
+
+    console.log(`/places/${data.place.id}/comment`)
   }
     return (
         <Def>
@@ -40,10 +42,10 @@ function show (data) {
               <h3>{data.place.showEstablished()}</h3>
               <h4> Serving {data.place.cuisines}</h4>
               <div className='buttons'>
-                <a href={`/places/${data.id}/edit`} className='btn btn-warning'>
+                <a href={`/places/${data.place.id}/edit`} className='btn btn-warning'>
                   Edit
                 </a>
-                <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
+                <form method="POST" action={`/places/${data.place.id}?_method=DELETE`}> 
                   <button type="submit" className="btn btn-danger">
                     Delete
                   </button>
@@ -56,6 +58,27 @@ function show (data) {
                 {comments}
               </div>
             </div>
+
+            <form method='POST' action={`/places/${data.place.id}/comment`}>
+             <label htmlFor='author'>Author Name</label>
+             <input className='form-control' id='author' name='author'/>
+
+
+             <label htmlFor='rant'>Rant</label>
+              <input  type="checkbox" id='rant' name='rant' />
+               
+              <label htmlFor='rating'>Rating</label>
+              <input  type="range" max="5" min="1" id='stars' name='stars' step=".5" />
+                 
+
+
+              <label htmlFor='content'>Comment</label>
+              <textarea  id='content' name='content' className='form-control'/>
+                
+
+              <input className ='btn btn-primary'type='submit' value='Add Comment'/>
+                
+            </form>
             
           </main>
         </Def>
